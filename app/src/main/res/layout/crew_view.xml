@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp220"
+    android:layout_height="@dimen/dp70"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp10"
+    app:cardElevation="@dimen/dp4"
+    android:layout_marginEnd="@dimen/dp10"
+    android:layout_marginTop="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp10"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/crewbg1"
+        android:id="@+id/llCrew"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/crew_warning"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/ivwarning"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/transparent"
+           >
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp55"
+                android:layout_height="@dimen/dp55"
+                android:background="@drawable/circuler_button"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp10"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="15"
+                    android:id="@+id/tv_no"
+                    android:textSize="@dimen/sp20"
+                    android:gravity="center"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp10"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crew \nDocument Expired"
+                    android:textSize="@dimen/sp16"
+                    android:gravity="start"
+                    android:id="@+id/tvTitle"
+                    android:textColor="@color/white"
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="data"
+            type="com.surya.sample.ui.home.adapter.SheqData" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp150"
+        app:cardCornerRadius="@dimen/dp15"
+        app:cardElevation="@dimen/dp7"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="@dimen/dp15">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INSPECTION/SURVEY FINDINGS"
+                    android:paddingLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:id="@+id/tvtitle"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp25"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/dp7"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:weightSum="1"
+                    android:id="@+id/llOverDue">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/circuler_button"
+                        android:tint="@color/red" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:text="Overdue"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:text="@{data.overdue}"
+                        android:id="@+id/tvOverDue"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical|end" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp25"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/dp7"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:weightSum="1"
+                    android:id="@+id/llDue">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/circuler_button"
+                        android:tint="@color/due" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:text="Due"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:text="@{data.due}"
+                        android:id="@+id/tvDue"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical|end" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp25"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/dp7"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:weightSum="1"
+                    android:id="@+id/llWindow">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/circuler_button"
+                        android:tint="@color/window" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:text="In window"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:text="@{data.window}"
+                        android:id="@+id/tvWindow"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical|end" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp25"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/dp7"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:weightSum="1"
+                    android:id="@+id/llReminder">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_weight=".1"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/circuler_button"
+                        android:tint="@color/purple" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:text="Reminder"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:text="@{data.reminder}"
+                        android:id="@+id/tvReminder"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical|end" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/dp7"
+                    android:id="@+id/llsecondpart"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="FINDINGS/NON CONFIRMITY"
+                        android:paddingLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:id="@+id/tvtitle2"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp25"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="@dimen/dp7"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:weightSum="1"
+                        android:id="@+id/llOverDue2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_weight=".1"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/circuler_button"
+                            android:tint="@color/red" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".6"
+                            android:text="Overdue"
+                            android:gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:text="01"
+                            android:layout_marginRight="@dimen/dp10"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical|end" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp25"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="@dimen/dp7"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:weightSum="1"
+                        android:id="@+id/llDue2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_weight=".1"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/circuler_button"
+                            android:tint="@color/due" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".6"
+                            android:text="Due"
+                            android:gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:text="02"
+                            android:layout_marginRight="@dimen/dp10"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical|end" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp25"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="@dimen/dp7"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:weightSum="1"
+                        android:id="@+id/llReminder2">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_weight=".1"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/circuler_button"
+                            android:tint="@color/purple" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".6"
+                            android:text="Reminder"
+                            android:gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:text="15"
+                            android:layout_marginRight="@dimen/dp10"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical|end" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.cardview.widget.CardView>
+</layout>
